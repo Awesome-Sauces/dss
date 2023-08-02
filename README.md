@@ -1,4 +1,4 @@
-## DSS v0.2 (Dataset Standard)
+# DSS v0.2 (Dataset Standard)
 ## Overview:
 The DSS v0.2 (Dataset Standard) is an enhanced format designed for storing data in JSON, catering to a broader range of statistical and machine learning models. It provides a more versatile structure that facilitates seamless data handling and interoperability across various AI applications.
 
