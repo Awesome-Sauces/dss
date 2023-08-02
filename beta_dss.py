@@ -91,3 +91,17 @@ class Dataset:
             "date": date,
             "changes": changes
         })
+
+    def to_dataframe(self):
+        # Convert each data entry to a pandas Series and collect them in a list
+        data_series = [pd.Series(entry) for entry in self.dataset['data']]
+
+        # Concatenate all series into a DataFrame
+        df = pd.concat(data_series, axis=1).T  # transpose (T) because concat works column-wise
+
+        # Convert the feature data types
+        for feature in self.dataset['features']:
+            if feature['data_type'] == 'numeric':
+                df[feature['name']] = pd.to_numeric(df[feature['name']], errors='coerce')
+
+        return df
