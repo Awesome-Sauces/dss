@@ -10,7 +10,7 @@
   "features": {
     "X": ["timestamp","price"],
     "Y": ["next_price"]
-  }.
+  },
   "data": {
     0: {
       "timestamp": "07-01-2023",
